@@ -2,23 +2,23 @@
 #include "raylib.h"
 #include <math.h>
 
-#define FPS 120
+#define FPS 100
 #define WIDTH 960
 #define HEIGHT 680
 #define THICKNESS 5
 #define MASS_LENGTH 100
 #define FLOOR_Y (HEIGHT*0.6)
-#define SPRING_LEN 20
+#define SPRING_LEN 30
 #define SPRING_THICKNESS 2
 #define K 50
-#define X_REST 300
+#define X_REST 350
 
 
 
 float mass_x = 600;
 float v = 30;
 float a = 2;
-float f = 0.3;
+float f = 0.5;
 
 void drawSpring()
 {
@@ -73,7 +73,7 @@ int main()
 
 {
 
-    InitWindow(WIDTH, HEIGHT, "ElasticCore: A Spring on Mass Simulation");
+    InitWindow(WIDTH, HEIGHT, "ElasticCore: A Mass on Spring Simulation");
 
     SetTargetFPS(FPS);
     float dt;
@@ -91,8 +91,8 @@ int main()
             mass_x += v * dt;
             drawMass();
             drawFloor(); 
-            DrawText("Spring Mass Simulation", WIDTH/10, 80, 30, RED);
-            printf("%f\n", mass_x);
+            DrawText("Mass on Simulation", WIDTH/10, 80, 30, RED);
+            
         EndDrawing();
     }
 
