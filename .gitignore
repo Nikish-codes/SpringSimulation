@@ -1,0 +1,16 @@
+# Compiled binaries
+spring
+*.o
+*.out
+*.exe
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build directories
+build/
+dist/
